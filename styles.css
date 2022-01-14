@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--pale-blue);
+  background-image: url("/projects/order-summary-component/images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  height: 700px;
+  width: 450px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: -3px 23px 23px -6px hsl(225deg 29% 81%);
+  -webkit-box-shadow: -3px 23px 23px -6px hsl(225deg 29% 81%);
+  -moz-box-shadow: -3px 23px 23px -6px hsl(225deg 29% 81%);
+}
+
+.top-img img {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  width: 450px;
+}
+
+.ord-sum h1 {
+  font-size: 28px;
+  font-weight: 900;
+  padding-top: 40px;
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+.par p {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--desaturated-blue);
+  text-align: center;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 25px;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 10px;
+  margin-bottom: 30px;
+  height: 100px;
+  width: 350px;
+  border-radius: 12px;
+  background-color: var(--very-pale-blue);
+}
+
+.txt h4 {
+  display: flex;
+  justify-content: center;
+  color: var(--dark-blue);
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding-bottom: 5px;
+}
+
+.txt p {
+  color: var(--desaturated-blue);
+  font-size: 16px;
+}
+
+.btn-change {
+  border: none;
+  margin-left: 80px;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: transparent;
+  color: var(--bright-blue);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+.btn-change:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.btn-payment {
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--bright-blue);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 0;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.btn-payment:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.btn-order {
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  font-family: "Red Hat Display", sans-serif;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 0;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.btn-order:hover {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+@media (max-width: 768px) {
+  .card {
+    height: 670px;
+    width: 400px;
+    border-radius: 18px;
+    background-color: #fff;
+  }
+  .top-img img {
+    width: 400px;
+  }
+}
+@media (max-width: 425px) {
+  .card {
+    height: 600px;
+    width: 340px;
+    border-radius: 18px;
+    background-color: #fff;
+  }
+  .top-img img {
+    width: 340px;
+  }
+  .price-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 4px;
+    margin-bottom: 30px;
+    height: 100px;
+    width: 290px;
+    border-radius: 12px;
+    background-color: var(--very-pale-blue);
+  }
+  .btn-payment {
+    width: 260px;
+  }
+  .btn-order {
+    margin: 10px auto;
+    padding: 10px 0;
+  }
+  .par p,
+  .btn-order,
+  .btn-payment,
+  .btn-change,
+  .txt p {
+    font-size: 14px;
+  }
+  .txt h4 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 280px) {
+  .card {
+    height: 600px;
+    width: 310px;
+    border-radius: 18px;
+    background-color: #fff;
+  }
+  .top-img img {
+    width: 310px;
+  }
+  .btn-payment {
+    width: 260px;
+  }
+
+  .par p,
+  .btn-order,
+  .btn-payment,
+  .btn-change,
+  .txt p {
+    font-size: 12px;
+  }
+}
